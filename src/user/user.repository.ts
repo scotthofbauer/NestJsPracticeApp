@@ -29,8 +29,7 @@ export class UserRepository extends Repository<User> {
     }
   };
   removeUser= async (id: number) => {
-    try{
-      await this.findOneOrFail(id);
+    try{      
       return this.delete(id);
     }
     catch(e){
