@@ -13,4 +13,17 @@ export class UserService {
     createUser(userDTO: UserDTO){
         return this.UserRepository.createUser(userDTO);
     }
+    updateUser(userDTO: UserDTO){
+        return this.UserRepository.updateUser(userDTO);
+    }
+    findOneUser(id: number){
+        return this.UserRepository.findOneUser(id);
+    }
+    removeUser(id: number){
+        return this.UserRepository.removeUser(id);
+    }
+    findAllUsers(){
+        return this.UserRepository.findAllUsers();
+    }
+
 }
